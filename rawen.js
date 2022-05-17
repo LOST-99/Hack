@@ -27,7 +27,7 @@ client.on("message", message => {
 
 client.on("message", message => {
 
-  if (message.content.startsWith(`.`)) {
+  if (message.content.startsWith(`sraw`)) {
 
     message.delete();
 
@@ -107,12 +107,11 @@ client.on("message", message => {
 
               channel.send(
 
-                "@everyone Hacked By nawe xot dabne :joy: :joy: :joy:"
+                "@everyone Hacked By DarkMode:joy: :joy: :joy:"
 
               );
 
-            });
-
+            })
         },
 
  
